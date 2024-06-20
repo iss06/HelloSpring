@@ -20,6 +20,7 @@
     <!-- base-package의 하위 패키지를 대상으로 컴포넌트 스캔 Bean으로 등록 -->
     <context:component-scan base-package="himedia.hellospring.controllers">
     	<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    	<context:exclude-filter type="regex" expression=".*"/>
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+    	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
     </context:component-scan>
 </beans>
